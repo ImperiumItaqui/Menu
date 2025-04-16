@@ -1,0 +1,479 @@
+<!DOCTYPE html> 
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Cardápio</title>
+  <style>
+    body {
+      background-color: #000;
+      color: white;
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+    }
+
+    #logo {
+      text-align: center;
+      margin-top: 50px;
+    }
+
+    #logo img {
+      width: 100%;
+      max-width: 500px;
+      height: auto;
+    }
+
+    #menu-title {
+      color: #FFD700;
+      font-size: 36px;
+      margin-top: 20px;
+      text-align: center;
+      font-weight: bold;
+      text-shadow: 0 0 10px #FFD700;
+    }
+
+    .button {
+      background-color: #333;
+      color: white;
+      padding: 20px;
+      width: 600px;
+      margin: 15px auto;
+      cursor: pointer;
+      border: none;
+      border-radius: 5px;
+      text-align: center;
+    }
+
+    .button:hover {
+      background-color: #444;
+    }
+
+    .button-content {
+      display: none;
+      background-color: #222;
+      padding: 10px;
+      margin-top: 5px;
+      border-radius: 5px;
+    }
+
+    .category {
+      margin: 5px 0;
+      display: flex;
+      justify-content: space-between;
+      padding: 5px 10px;
+      border-bottom: 1px solid #333;
+    }
+
+    .category-name {
+      font-weight: bold;
+      color: white;
+    }
+
+    .subcategory {
+      color: #FFD700;
+      font-weight: bold;
+      text-align: left;
+      padding: 10px 10px 5px 10px;
+    }
+
+    .category-price {
+      color: #00FF00;
+      font-weight: bold;
+    }
+
+    #social-footer {
+      text-align: center;
+      margin-top: 50px;
+      padding: 20px;
+      background-color: #222;
+    }
+
+    #social-footer img {
+      width: 25px; /* Tamanho dos ícones ajustado */
+      height: auto;
+      margin: 0 10px; /* Espaçamento entre os ícones */
+    }
+  </style>
+</head>
+<body>
+
+  <div id="logo">
+    <img src="logo.png" alt="Logo">
+    <h1 id="menu-title">MENU</h1>
+  </div>
+
+</body>
+</html>
+
+
+
+
+  <!-- Lanches -->
+  <div class="button" onclick="toggleVisibility('lanches')">
+  Lanches
+  <div id="lanches" class="button-content">
+    <div class="category">
+      <span class="category-name">Xis Salada</span>
+      <span class="category-price">R$ 21,00</span>
+    </div>
+    <div class="category">
+      <span class="category-name">Xis Kids Salada</span>
+      <span class="category-price">R$ 16,00</span>
+    </div>
+    <div class="category">
+      <span class="category-name">Xis Frango</span>
+      <span class="category-price">R$ 26,00</span>
+    </div>
+    <div class="category">
+      <span class="category-name">Xis Kids Frango</span>
+      <span class="category-price">R$ 18,00</span>
+    </div>
+    <div class="category">
+      <span class="category-name">Xis Calabresa</span>
+      <span class="category-price">R$ 27,00</span>
+    </div>
+    <div class="category">
+      <span class="category-name">Xis Kids Calabresa</span>
+      <span class="category-price">R$ 20,00</span>
+    </div>
+    <div class="category">
+      <span class="category-name">Xis Bacon</span>
+      <span class="category-price">R$ 28,00</span>
+    </div>
+    <div class="category">
+      <span class="category-name">Xis Kids Bacon</span>
+      <span class="category-price">R$ 22,00</span>
+    </div>
+    <div class="category">
+      <span class="category-name">Xis Coração</span>
+      <span class="category-price">R$ 27,00</span>
+    </div>
+    <div class="category">
+      <span class="category-name">Xis Kids Coração</span>
+      <span class="category-price">R$ 20,00</span>
+    </div>
+    <div class="category">
+      <span class="category-name">Xis Bagunça</span>
+      <span class="category-price">R$ 32,00</span>
+    </div>
+    <div class="category">
+      <span class="category-name">Mini Xis (sabores variados)</span>
+      <span class="category-price">R$ 23,00</span>
+    </div>
+    <div class="category">
+      <span class="category-name">Xis Duplo</span>
+      <span class="category-price">R$ 27,00</span>
+    </div>
+    <div class="category">
+      <span class="category-name">Torrada com Ovo</span>
+      <span class="category-price">R$ 10,00</span>
+    </div>
+    <div class="category">
+      <span class="category-name">Cachorro-quente</span>
+      <span class="category-price">R$ 15,00</span>
+    </div>
+    <div class="category">
+      <span class="category-name">Cão-bife</span>
+      <span class="category-price">R$ 20,00</span>
+    </div>
+    <div class="category">
+      <span class="category-name">Sanduíche Universitário</span>
+      <span class="category-price">R$ 60,00</span>
+    </div>
+
+      <!-- Long Neck -->
+      <div class="subcategory">Adicionais</div>
+      <div class="category">
+        <span class="category-name">Bife</span>
+        <span class="category-price">R$ 7,00</span>
+      </div>
+      <div class="category">
+        <span class="category-name">Bacon</span>
+        <span class="category-price">R$ 7,00</span>
+      </div>
+      <div class="category">
+        <span class="category-name">Queijo</span>
+        <span class="category-price">R$ 6,00</span>
+      </div>
+      <div class="category">
+        <span class="category-name">Ovo</span>
+        <span class="category-price">R$ 2,00</span>
+		</div>
+      <div class="category">
+        <span class="category-name">Salsicha</span>
+        <span class="category-price">R$ 2,00</span>
+    </div>
+  </div>
+</div>
+
+
+  <!-- Aperitivos -->
+  <div class="button" onclick="toggleVisibility('aperitivos')">
+    Aperitivos
+    <div id="aperitivos" class="button-content">
+    <div class="category">
+      <span class="category-name">Picado Bagunça</span>
+      <span class="category-price">R$ 70,00 / R$ 45,00</span>
+    </div>
+    <div class="category">
+      <span class="category-name">Iscas de Filé com Batata Frita ou Polenta</span>
+      <span class="category-price">R$ 70,00 / R$ 45,00</span>
+    </div>
+    <div class="category">
+      <span class="category-name">Iscas de Filé de Frango com Batata Frita ou Polenta</span>
+      <span class="category-price">R$ 60,00 / R$ 35,00</span>
+    </div>
+    <div class="category">
+      <span class="category-name">Porção de Batatas Fritas</span>
+      <span class="category-price">R$ 30,00 / R$ 18,00</span>
+    </div>
+    <div class="category">
+      <span class="category-name">Porção de Polentas Fritas</span>
+      <span class="category-price">R$ 30,00 / R$ 18,00</span>
+    </div>
+    <div class="category">
+      <span class="category-name">Iscas de Filé à Milanesa</span>
+      <span class="category-price">R$ 80,00 / R$ 45,00</span>
+    </div>
+    <div class="category">
+      <span class="category-name">Iscas de Filé à Milanesa de Frango</span>
+      <span class="category-price">R$ 65,00 / R$ 35,00</span>
+    </div>
+    <div class="category">
+      <span class="category-name">Picadão Imperial</span>
+      <span class="category-price">R$ 90,00 / R$ 50,00</span>
+    </div>
+  </div>
+</div>
+
+
+  <!-- Pratos -->
+  <div class="button" onclick="toggleVisibility('pratos')">
+    Pratos
+    <div id="pratos" class="button-content">
+      <div class="category">
+        <span class="category-name">Filé à Parmegiana</span>
+        <span class="category-price">R$ 130,00</span>
+      </div>
+      <div class="category">
+        <span class="category-name">Meio Filé à Parmegiana</span>
+        <span class="category-price">R$ 70,00</span>
+      </div>
+      <div class="category">
+        <span class="category-name">Prato Feito</span>
+        <span class="category-price">R$ 25,00</span>
+      </div>
+    </div>
+  </div>
+
+  <!-- Peixes -->
+  <div class="button" onclick="toggleVisibility('peixes')">
+    Peixes
+    <div id="peixes" class="button-content">
+      <div class="category">
+        <span class="category-name">Filé de Tilápia</span>
+        <span class="category-price">R$ 60,00 / R$ 35,00</span>
+      </div>
+      <div class="category">
+        <span class="category-name">Filé de Traíra</span>
+        <span class="category-price">R$ 60,00 / R$ 35,00</span>
+      </div>
+      <div class="category">
+        <span class="category-name">Iscas de Peixe</span>
+        <span class="category-price">R$ 60,00 / R$ 35,00</span>
+      </div>
+      <div class="category">
+        <span class="category-name">Isca Imperial</span>
+        <span class="category-price">R$ 80,00 / R$ 45,00</span>
+      </div>
+    </div>
+  </div>
+
+  <!-- Destilados -->
+  <div class="button" onclick="toggleVisibility('destilados')">
+    Destilados
+    <div id="destilados" class="button-content">
+      <div class="category">
+        <span class="category-name">Espumante</span>
+        <span class="category-price">R$ 65,00</span>
+      </div>
+      <div class="category">
+        <span class="category-name">Whisky (dose)</span>
+        <span class="category-price">R$ 15,00</span>
+      </div>
+      <div class="category">
+        <span class="category-name">Gin (dose)</span>
+        <span class="category-price">R$ 12,00</span>
+      </div>
+      <div class="category">
+        <span class="category-name">Fernet (dose)</span>
+        <span class="category-price">R$ 10,00</span>
+      </div>
+      <div class="category">
+        <span class="category-name">Sminorff Ice</span>
+        <span class="category-price">R$ 15,00</span>
+      </div>
+      <div class="category">
+        <span class="category-name">Gin Tônica Lata</span>
+        <span class="category-price">R$ 10,00</span>
+      </div>
+      <div class="category">
+        <span class="category-name">Mike’s</span>
+        <span class="category-price">R$ 9,00</span>
+      </div>
+    </div>
+  </div>
+
+  <!-- Cervejas -->
+  <div class="button" onclick="toggleVisibility('cervejas')">
+    Cervejas
+    <div id="cervejas" class="button-content">
+      <!-- Garrafa Litro -->
+      <div class="subcategory">Garrafa Litro</div>
+      <div class="category">
+        <span class="category-name">Quilmes</span>
+        <span class="category-price">R$ 16,00</span>
+      </div>
+      <div class="category">
+        <span class="category-name">Original</span>
+        <span class="category-price">R$ 16,00</span>
+      </div>
+      <div class="category">
+        <span class="category-name">Budweiser</span>
+        <span class="category-price">R$ 15,00</span>
+      </div>
+      <div class="category">
+        <span class="category-name">Brahma</span>
+        <span class="category-price">R$ 14,00</span>
+      </div>
+      <div class="category">
+        <span class="category-name">Skol</span>
+        <span class="category-price">R$ 14,00</span>
+      </div>
+
+      <!-- Garrafa 600ml -->
+      <div class="subcategory">Garrafa 600ml</div>
+      <div class="category">
+        <span class="category-name">Stella</span>
+        <span class="category-price">R$ 15,00</span>
+      </div>
+      <div class="category">
+        <span class="category-name">Original</span>
+        <span class="category-price">R$ 14,00</span>
+      </div>
+      <div class="category">
+        <span class="category-name">Serra Malte</span>
+        <span class="category-price">R$ 14,00</span>
+      </div>
+      <div class="category">
+        <span class="category-name">Brahma</span>
+        <span class="category-price">R$ 11,00</span>
+      </div>
+
+      <!-- Latão -->
+      <div class="subcategory">Latão</div>
+      <div class="category">
+        <span class="category-name">Original</span>
+        <span class="category-price">R$ 8,00</span>
+      </div>
+      <div class="category">
+        <span class="category-name">Budweiser</span>
+        <span class="category-price">R$ 8,00</span>
+      </div>
+      <div class="category">
+        <span class="category-name">Brahma</span>
+        <span class="category-price">R$ 7,00</span>
+      </div>
+      <div class="category">
+        <span class="category-name">Skol</span>
+        <span class="category-price">R$ 7,00</span>
+      </div>
+
+      <!-- Long Neck -->
+      <div class="subcategory">Long Neck</div>
+      <div class="category">
+        <span class="category-name">Corona / Corona Zero Álcool</span>
+        <span class="category-price">R$ 10,00</span>
+      </div>
+      <div class="category">
+        <span class="category-name">Michelob</span>
+        <span class="category-price">R$ 10,00</span>
+      </div>
+      <div class="category">
+        <span class="category-name">Stella</span>
+        <span class="category-price">R$ 9,00</span>
+      </div>
+      <div class="category">
+        <span class="category-name">Budweiser</span>
+        <span class="category-price">R$ 8,00</span>
+      </div>
+
+    </div>
+  </div>
+
+  <!-- Não Alcoólicos -->
+  <div class="button" onclick="toggleVisibility('nao-alcoolicos')">
+    Não Alcoólicos
+    <div id="nao-alcoolicos" class="button-content">
+      <div class="category">
+        <span class="category-name">Água com/sem gás</span>
+        <span class="category-price">R$ 4,00</span>
+      </div>
+      <div class="category">
+        <span class="category-name">Suco Lata</span>
+        <span class="category-price">R$ 6,00</span>
+      </div>
+      <div class="category">
+        <span class="category-name">H2O</span>
+        <span class="category-price">R$ 6,00</span>
+      </div>
+      <div class="category">
+        <span class="category-name">Refrigerante KS / Lata</span>
+        <span class="category-price">R$ 5,00</span>
+      </div>
+      <div class="category">
+        <span class="category-name">Refrigerante 600ml</span>
+        <span class="category-price">R$ 7,00</span>
+      </div>
+      <div class="category">
+        <span class="category-name">Refrigerante 2L</span>
+        <span class="category-price">R$ 12,00</span>
+      </div>
+      <div class="category">
+        <span class="category-name">Guaraná Antarctica 1L</span>
+        <span class="category-price">R$ 9,00</span>
+      </div>
+      <div class="category">
+        <span class="category-name">Refrigerante 1L</span>
+        <span class="category-price">R$ 9,00</span>
+      </div>
+	  
+    </div>
+  </div>
+  
+  
+  <!-- Rodapé com redes sociais -->
+  <footer id="social-footer">
+    <a href="https://www.instagram.com/imperiumxistradicional/?hl=pt" target="_blank">
+      <img src="https://cdn-icons-png.flaticon.com/512/2111/2111463.png" alt="Instagram">
+    </a>
+    <a href="https://www.facebook.com/imperiumxistradicional/" target="_blank">
+      <img src="https://cdn-icons-png.flaticon.com/512/733/733547.png" alt="Facebook">
+    </a>
+    <a href="https://wa.me/5555999186273" target="_blank">
+      <img src="https://cdn-icons-png.flaticon.com/512/733/733585.png" alt="WhatsApp">
+    </a>
+  </footer>
+</body>
+</html>
+
+  <script>
+    function toggleVisibility(menuId) {
+      const menu = document.getElementById(menuId);
+      menu.style.display = menu.style.display === "block" ? "none" : "block";
+    }
+  </script>
+
+</body>
+</html>
